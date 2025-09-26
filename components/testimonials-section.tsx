@@ -117,7 +117,7 @@ export function TestimonialsSection() {
                   </div>
 
                   <blockquote className="text-lg sm:text-xl md:text-2xl font-medium mb-4 sm:mb-6 text-pretty">
-                    "{testimonials[currentIndex].text}"
+                    &quot;{testimonials[currentIndex].text}&quot;
                   </blockquote>
 
                   <div className="flex items-center justify-center gap-3 sm:gap-4">
