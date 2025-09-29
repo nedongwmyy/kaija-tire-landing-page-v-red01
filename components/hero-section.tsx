@@ -15,7 +15,7 @@ export function HeroSection() {
       {/* Full-screen Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/header.png"
+          src="https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/header3.png"
           alt={
             language === "en" 
               ? "KAIJA TIRE - Advanced Puncture-Resistant Liner System Background" 
