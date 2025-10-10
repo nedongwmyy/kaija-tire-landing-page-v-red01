@@ -143,9 +143,9 @@ export const translations = {
     footer: {
       company: "NEDONG",
       description: "Professional tire protection solutions for serious riders",
-      address: "No. 118, Kaija Street, Tire Protection District, Mobility City, MC 50001",
-      email: "contact@nedong.com",
-      phone: "+1 (555) 123-4567",
+      address: "Room 501, No. 163 Pingyun Road, Tianhe District, Guangzhou (Unit: Room 501)",
+      email: "nd@nedong.cn",
+      phone: "+86 13902337334",
       rights: "All rights reserved."
     }
   },
@@ -293,9 +293,9 @@ export const translations = {
     footer: {
       company: "NEDONG",
       description: "Soluciones profesionales de protección de neumáticos para ciclistas serios",
-      address: "Nº 118, Calle Kaija, Distrito de Protección de Neumáticos, Ciudad de Movilidad, MC 50001",
-      email: "contacto@nedong.com",
-      phone: "+1 (555) 123-4567",
+      address: "Sala 501, No. 163 de la calle Pingyun, Distrito Tianhe, Guangzhou (Unidad: Sala 501)",
+      email: "nd@nedong.cn",
+      phone: "+86 13902337334",
       rights: "Todos los derechos reservados."
     }
   },
@@ -442,10 +442,10 @@ export const translations = {
     // Footer
     footer: {
       company: "NEDONG",
-      description: "Soluzioni professionali di protezione pneumatici per ciclisti seris",
-      address: "N. 118, Via Kaija, Distretto Protezione Pneumatici, Città della Mobilità, MC 50001",
-      email: "contatto@nedong.com",
-      phone: "+1 (555) 123-4567",
+      description: "Soluzioni professionali di protezione pneumatici per ciclisti seri",
+      address: "Stanza 501, No. 163 via Pingyun, Distretto Tianhe, Guangzhou (Unità: Stanza 501)",
+      email: "nd@nedong.cn",
+      phone: "+86 13902337334",
       rights: "Tutti i diritti riservati."
     }
   }

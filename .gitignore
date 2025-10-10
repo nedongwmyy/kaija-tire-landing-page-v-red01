@@ -62,3 +62,6 @@ tmp/
 temp/
 *.tmp
 *.temp
+
+# Specific files to ignore
+lib/aHlzdGVyaWEyOi8vYTYwNmMzMTItMzFlNy00YWI5.yaml 

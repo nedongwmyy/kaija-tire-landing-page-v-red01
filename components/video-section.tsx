@@ -12,7 +12,7 @@ export function VideoSection() {
         <div className="w-[1300px] max-w-full">
           <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
-              src="https://www.youtube.com/embed/w0dgOTUFkw4"
+              src="https://www.youtube.com/embed/DMhskZ9on4o"
               title={
                 language === "en" 
                   ? "KAIJA Tire in Action" 
