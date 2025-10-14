@@ -23,7 +23,7 @@ export const translations = {
     productGallery: {
       title: "KAIJA Tire - 20X4.0 Puncture-Resistant Liner System",
       subtitle: "Professional-grade tire protection for extreme conditions",
-      cta1: "Inquiry Now",
+      cta1: "Mail Now",
       cta2: "Whatsapp Now",
       highlights: "Product Highlights",
       highlightsText: "Crafted from high-polymer composite materials with a 15mm ultra-thick puncture-resistant layer, reducing flat tire risk by over 90%. Specifically designed for mountain bikes, snow bikes, and other wide-tire vehicles, providing ultimate safety and comfort.",

@@ -21,9 +21,9 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "KAIJA Tire - 20X4.0 Puncture-Resistant Liner System",
-      subtitle: "Professional-grade tire protection for extreme conditions",
-      cta1: "Inquiry Now",
+      title: "KAIJA Tire - 20X4.0 ",
+      subtitle: "Puncture-Resistant Liner System Professional-grade tire protection for extreme conditions",
+      cta1: "Mail Now",
       cta2: "Whatsapp Now",
       highlights: "Product Highlights",
       highlightsText: "Crafted from high-polymer composite materials with a 15mm ultra-thick puncture-resistant layer, reducing flat tire risk by over 90%. Specifically designed for mountain bikes, snow bikes, and other wide-tire vehicles, providing ultimate safety and comfort.",
@@ -118,9 +118,9 @@ export const translations = {
     
     // Company Intro
     company: {
-      title: "Tech Pioneer in Green Mobility",
-      subtitle: "NEDONG's commitment to innovation and quality",
-      description: "1. Tech Pioneer in Green Mobility\nFounded in 2009, Nedong Co., Ltd leads in eco-friendly airless tire innovation. With over 100 patents, our non-toxic, maintenance-free, recyclable tires (EU RoHS certified) offer superior performance across diverse vehicles. We're an industry leader, highly popular in global markets like Europe and America.\n\n2. Proven Quality & Esteemed Recognition\nNedong tires deliver exceptional safety, durability, and cost-effectiveness. Our continuous innovation is backed by expert collaborations and recognized by multiple government awards for technological advancement. This solidifies our reputation for reliable, high-performing products.\n\n3. Sustainable Impact & Zero-Pollution\nCommitted to environmental stewardship, Nedong's manufacturing process achieves zero pollution. Our eco-friendly tires deployed in major cities reduce public bike maintenance and boost usage, earning widespread social acclaim. We are dedicated to pioneering a greener, low-carbon future for transportation.",
+      title: "Revolutionizing Rides, Leading the Future!",
+      subtitle: " ",
+      description: "✅ 100+ Patents, Global Trust Our eco-friendly airless tires are maintenance-free, non-toxic, and recyclable. Backed by over 100 patents and EU RoHS certification, our superior performance is trusted across Europe and America! \n\n🏆 Proven Quality, Award-Winning Excellence Unmatched safety, exceptional durability! Our continuous innovation is recognized by multiple government awards for technological advancement, cementing our reputation for high-performance reliability. \n\n♻️ Zero-Pollution, Sustainable Impact We are committed to a greener planet with a zero-pollution manufacturing process. Join us in pioneering a low-carbon future for urban transport!",
     },
     
     // FAQ
@@ -171,8 +171,8 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "Neumático KAIJA - Sistema de Forro Resistente a Perforaciones 20X4.0",
-      subtitle: "Protección de neumáticos de grado profesional para condiciones extremas",
+      title: "Neumático KAIJA - 20X4.0",
+      subtitle: "Sistema de Forro Resistente a Perforaciones Protección de neumáticos de grado profesional para condiciones extremas",
       cta1: "Solicitar Ahora",
       cta2: "Whatsapp Ahora",
       highlights: "Características del Producto",
@@ -268,9 +268,9 @@ export const translations = {
     
     // Company Intro
     company: {
-      title: "Tech Pioneer in Green Mobility",
-      subtitle: "El compromiso de NEDONG con la innovación y la calidad",
-      description: "1. Tech Pioneer in Green Mobility\nFounded in 2009, Nedong Co., Ltd leads in eco-friendly airless tire innovation. With over 100 patents, our non-toxic, maintenance-free, recyclable tires (EU RoHS certified) offer superior performance across diverse vehicles. We're an industry leader, highly popular in global markets like Europe and America.\n\n2. Proven Quality & Esteemed Recognition\nNedong tires deliver exceptional safety, durability, and cost-effectiveness. Our continuous innovation is backed by expert collaborations and recognized by multiple government awards for technological advancement. This solidifies our reputation for reliable, high-performing products.\n\n3. Sustainable Impact & Zero-Pollution\nCommitted to environmental stewardship, Nedong's manufacturing process achieves zero pollution. Our eco-friendly tires deployed in major cities reduce public bike maintenance and boost usage, earning widespread social acclaim. We are dedicated to pioneering a greener, low-carbon future for transportation.",
+      title: "¡Revolutionando Viajes, Liderando el Futuro!",
+      subtitle: " ",
+      description: "✅ 100+ Patentes, Confianza Global Nuestros neumáticos ecológicos sin aire son libres de mantenimiento, no tóxicos y reciclables. Apoyados por más de 100 patentes y certificación EU RoHS, nuestro rendimiento superior es confiado en toda Europa y América! \n\n🏆 Calidad Demostrada, Excelencia Galardonada ¡Seguridad incomparable, durabilidad excepcional! Nuestra innovación continua es reconocida por múltiples premios gubernamentales por avances tecnológicos, consolidando nuestra reputación por confiabilidad de alto rendimiento. \n\n♻️ Impacto Sostenible, Cero Contaminación Estamos comprometidos con un planeta más verde con un proceso de fabricación sin contaminación. ¡Únete a nosotros en la pionería de un futuro de bajas emisiones para el transporte urbano!",
     },
     
     // FAQ
@@ -321,8 +321,8 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "Pneumatico KAIJA - Sistema di Protezione Antipuntura 20X4.0",
-      subtitle: "Protezione pneumatici di qualità professionale per condizioni estreme",
+      title: "Pneumatico KAIJA - 20X4.0",
+      subtitle: "Sistema di Protezione Antipuntura Protezione pneumatici di qualità professionale per condizioni estreme",
       cta1: "Richiedi Ora",
       cta2: "Contatta su Whatsapp",
       highlights: "Caratteristiche del Prodotto",
@@ -418,9 +418,9 @@ export const translations = {
     
     // Company Intro
     company: {
-      title: "Tech Pioneer in Green Mobility",
-      subtitle: "L'impegno di NEDONG per l'innovazione e la qualità",
-      description: "1. Tech Pioneer in Green Mobility\nFounded in 2009, Nedong Co., Ltd leads in eco-friendly airless tire innovation. With over 100 patents, our non-toxic, maintenance-free, recyclable tires (EU RoHS certified) offer superior performance across diverse vehicles. We're an industry leader, highly popular in global markets like Europe and America.\n\n2. Proven Quality & Esteemed Recognition\nNedong tires deliver exceptional safety, durability, and cost-effectiveness. Our continuous innovation is backed by expert collaborations and recognized by multiple government awards for technological advancement. This solidifies our reputation for reliable, high-performing products.\n\n3. Sustainable Impact & Zero-Pollution\nCommitted to environmental stewardship, Nedong's manufacturing process achieves zero pollution. Our eco-friendly tires deployed in major cities reduce public bike maintenance and boost usage, earning widespread social acclaim. We are dedicated to pioneering a greener, low-carbon future for transportation.",
+      title: "Rivoluzionando i Viaggi, Guidando il Futuro!",
+      subtitle: " ",
+      description: "✅ Oltre 100 Brevetti, Fiducia Globale I nostri pneumatici ecologici senza aria sono privi di manutenzione, non tossici e riciclabili. Sostenuti da oltre 100 brevetti e dalla certificazione EU RoHS, le nostre prestazioni superiori sono apprezzate in tutta Europa e America! \n\n🏆 Qualità Dimostrata, Eccellenza Premiata Sicurezza imbattibile, durata eccezionale! La nostra continua innovazione è riconosciuta da numerosi premi governativi per l'avanzamento tecnologico, consolidando la nostra reputazione per affidabilità ad alte prestazioni. \n\n♻️ Impatto Sostenibile, Zero Inquinamento Siamo impegnati per un pianeta più verde con un processo produttivo senza inquinamento. Unisciti a noi nell'apripista per un futuro a basse emissioni per il trasporto urbano!",
     },
     
     // FAQ
@@ -442,7 +442,7 @@ export const translations = {
     // Footer
     footer: {
       company: "NEDONG",
-      description: "Soluzioni professionali di protezione pneumatici per ciclisti seri",
+      description: "Soluzioni professionali di protezione pneumatici per ciclisti seris",
       address: "Stanza 501, No. 163 via Pingyun, Distretto Tianhe, Guangzhou (Unità: Stanza 501)",
       email: "nd@nedong.cn",
       phone: "+86 13902337334",

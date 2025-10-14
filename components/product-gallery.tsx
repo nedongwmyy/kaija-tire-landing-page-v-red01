@@ -22,13 +22,7 @@ const mediaItems = [
   },
   {
     type: "image",
-    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/882f554ce77e243cbeee12ea45defba8",
-    alt: "Installation Video",
-    title: "Installation Guide",
-  },
-  {
-    type: "image",
-    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/f13f156c6647fd5bf0a900aa972fc9f9",
+    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/960f5923a6190da2c81124bb4018e82e",
     alt: "Puncture Resistance Demo",
     title: "Puncture Test",
   },
@@ -178,15 +172,7 @@ export function ProductGallery() {
 
           {/* Product Info */}
           <div className="space-y-6">
-            {/* Reviews */}
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm text-gray-600">4.9 (2,847 reviews)</span>
-            </div>
+
 
             {/* Title */}
             <div>
@@ -225,13 +211,7 @@ export function ProductGallery() {
               </Button>
             </div>
 
-            {/* Product Description */}
-            <div className="space-y-4 pt-6 border-t">
-              <h3 className="font-semibold">{t.productGallery.highlights}</h3>
-              <p className="text-muted-foreground text-pretty">
-                {t.productGallery.highlightsText}
-              </p>
-            </div>
+
 
             {/* Trust Signals */}
             <div className="flex gap-4 pt-4">
@@ -243,6 +223,73 @@ export function ProductGallery() {
                 <Shield className="h-4 w-4 text-accent" />
                 <span>{t.productGallery.rohsCertified}</span>
               </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="pt-8 border-t">
+              <h3 className="font-semibold mb-4">{t.productGallery.contactFormTitle || "Get in Touch"}</h3>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                      {t.productGallery.nameLabel || "Name"}
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder={t.productGallery.namePlaceholder || "Your Name"}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                      {t.productGallery.emailLabel || "Email"}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder={t.productGallery.emailPlaceholder || "your.email@example.com"}
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                    {t.productGallery.phoneLabel || "Phone Number"}
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder={t.productGallery.phonePlaceholder || "Your Phone Number"}
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                    {t.productGallery.messageLabel || "Message"}
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder={t.productGallery.messagePlaceholder || "Your Message"}
+                  ></textarea>
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  className="w-full py-3 font-medium"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Handle form submission here
+                    console.log("Form submitted");
+                  }}
+                >
+                  {t.productGallery.submitButton || "Submit"}
+                </Button>
+              </form>
             </div>
           </div>
         </div>
