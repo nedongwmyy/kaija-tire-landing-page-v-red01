@@ -52,7 +52,8 @@ export function ScrollingFeatures() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        {/* For large screens - original layout */}
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 md:space-y-8">
             {features.map((feature, index) => {
@@ -107,6 +108,61 @@ export function ScrollingFeatures() {
               />
             </div>
           </div>
+        </div>
+
+        {/* For small screens - alternating text and image */}
+        <div className="lg:hidden space-y-12">
+          {features.map((feature, index) => {
+            const Icon = feature.icon
+            return (
+              <div key={index} className="space-y-6">
+                {/* Text Content */}
+                <div
+                  className={`p-4 md:p-6 rounded-xl transition-all duration-500 cursor-pointer ${
+                    index === activeFeature
+                      ? "bg-red-600 text-white shadow-lg scale-[1.02]"
+                      : "bg-gray-100"
+                  }`}
+                  onMouseEnter={() => handleFeatureSelect(index)}
+                  onClick={() => handleFeatureSelect(index)}
+                  onTouchStart={() => handleFeatureSelect(index)}
+                >
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <div
+                      className={`p-2 md:p-3 rounded-lg ${
+                        index === activeFeature ? "bg-red-700/20" : "bg-red-600/10"
+                      }`}
+                    >
+                      <Icon
+                        className={`h-5 w-5 md:h-6 md:w-6 ${index === activeFeature ? "text-white" : "text-red-600"}`}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900 leading-tight">
+                        {translate(feature.titleKey)}
+                      </h3>
+                      <p
+                        className={`${
+                          index === activeFeature ? "text-white/90" : "text-gray-600"
+                        } text-pretty leading-relaxed`}
+                      >
+                        {translate(feature.descriptionKey)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image */}
+                <div className="rounded-xl overflow-hidden bg-white shadow-2xl">
+                  <img
+                    src={feature.image}
+                    alt={translate(feature.titleKey)}
+                    className="w-full max-w-none h-auto object-cover transition-all duration-500 mx-auto"
+                  />
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

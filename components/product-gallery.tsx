@@ -184,8 +184,20 @@ export function ProductGallery() {
               </p>
             </div>
 
+            {/* Trust Signals */}
+            <div className="flex gap-4 pt-2">
+              <div className="flex items-center gap-2 text-sm">
+                <Award className="h-4 w-4 text-accent" />
+                <span>{t.productGallery.easyReturns}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Shield className="h-4 w-4 text-accent" />
+                <span>{t.productGallery.rohsCertified}</span>
+              </div>
+            </div>
+
             {/* Purchase Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-4">
               <Button 
                 size="lg" 
                 className="flex-1 min-w-[150px] text-lg py-6 cursor-pointer"
@@ -209,20 +221,6 @@ export function ProductGallery() {
               >
                 {t.productGallery.cta2}
               </Button>
-            </div>
-
-
-
-            {/* Trust Signals */}
-            <div className="flex gap-4 pt-4">
-              <div className="flex items-center gap-2 text-sm">
-                <Award className="h-4 w-4 text-accent" />
-                <span>{t.productGallery.easyReturns}</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Shield className="h-4 w-4 text-accent" />
-                <span>{t.productGallery.rohsCertified}</span>
-              </div>
             </div>
 
             {/* Contact Form */}
