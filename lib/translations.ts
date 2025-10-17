@@ -21,14 +21,27 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "KAIJA Tire - 20X4.0 ",
-      subtitle: "Puncture-Resistant Liner System Professional-grade tire protection for extreme conditions",
-      cta1: "Mail Now",
+      title: "KAIJA Tire - 20X4.0 Puncture-Resistant Liner System",
+      subtitle: "Professional-grade tire protection for extreme conditions",
+      cta1: "Inquiry Now",
       cta2: "Whatsapp Now",
       highlights: "Product Highlights",
       highlightsText: "Crafted from high-polymer composite materials with a 15mm ultra-thick puncture-resistant layer, reducing flat tire risk by over 90%. Specifically designed for mountain bikes, snow bikes, and other wide-tire vehicles, providing ultimate safety and comfort.",
       easyReturns: "Easy Returns",
-      rohsCertified: "RoHS Certified"
+      rohsCertified: "RoHS Certified",
+      emptyFormError: "Please fill in all fields before submitting",
+      backToForm: "Back to Form",
+      contactFormTitle: "Get in Touch",
+      nameLabel: "Name",
+      namePlaceholder: "Your Name",
+      emailLabel: "Email",
+      emailPlaceholder: "your.email@example.com",
+      phoneLabel: "Phone Number",
+      phonePlaceholder: "Your Phone Number",
+      messageLabel: "Message",
+      messagePlaceholder: "Your Message",
+      submitButton: "Submit",
+      submitSuccess: "Submitted successfully!"
     },
     
     // Impact Text
@@ -171,14 +184,27 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "Neumático KAIJA - 20X4.0",
-      subtitle: "Sistema de Forro Resistente a Perforaciones Protección de neumáticos de grado profesional para condiciones extremas",
+      title: "Neumático KAIJA - Sistema de Forro Resistente a Perforaciones 20X4.0",
+      subtitle: "Protección de neumáticos de grado profesional para condiciones extremas",
       cta1: "Solicitar Ahora",
       cta2: "Whatsapp Ahora",
       highlights: "Características del Producto",
       highlightsText: "Fabricado con materiales compuestos de alto polímero con una capa resistente a perforaciones de 15mm ultra gruesa, reduciendo el riesgo de pinchazos en más del 90%. Diseñado específicamente para bicicletas de montaña, bicicletas de nieve y otros vehículos de neumáticos anchos, proporcionando seguridad y comodidad máximas.",
       easyReturns: "Devoluciones Fáciles",
-      rohsCertified: "Certificado RoHS"
+      rohsCertified: "Certificado RoHS",
+      emptyFormError: "Por favor, complete todos los campos antes de enviar",
+      backToForm: "Volver al formulario",
+      contactFormTitle: "Póngase en contacto",
+      nameLabel: "Nombre",
+      namePlaceholder: "Tu nombre",
+      emailLabel: "Correo electrónico",
+      emailPlaceholder: "tu.correo@ejemplo.com",
+      phoneLabel: "Número de teléfono",
+      phonePlaceholder: "Tu número de teléfono",
+      messageLabel: "Mensaje",
+      messagePlaceholder: "Tu mensaje",
+      submitButton: "Enviar",
+      submitSuccess: "¡Enviado con éxito!"
     },
     
     // Impact Text
@@ -321,14 +347,27 @@ export const translations = {
     
     // Product Gallery
     productGallery: {
-      title: "Pneumatico KAIJA - 20X4.0",
-      subtitle: "Sistema di Protezione Antipuntura Protezione pneumatici di qualità professionale per condizioni estreme",
+      title: "Pneumatico KAIJA - Sistema di Protezione Antipuntura 20X4.0",
+      subtitle: "Protezione pneumatici di qualità professionale per condizioni estreme",
       cta1: "Richiedi Ora",
       cta2: "Contatta su Whatsapp",
       highlights: "Caratteristiche del Prodotto",
       highlightsText: "Realizzato con materiali compositi ad alta polimerizzazione e uno strato antipuntura ultra spesso di 15mm, riduce il rischio di forature oltre il 90%. Progettato specificatamente per mountain bike, bici da neve e altri veicoli con pneumatici larghi, garantendo massima sicurezza e comfort.",
       easyReturns: "Resi Facili",
-      rohsCertified: "Certificato RoHS"
+      rohsCertified: "Certificato RoHS",
+      emptyFormError: "Si prega di compilare tutti i campi prima di inviare",
+      backToForm: "Torna al modulo",
+      contactFormTitle: "Contattaci",
+      nameLabel: "Nome",
+      namePlaceholder: "Il tuo nome",
+      emailLabel: "Email",
+      emailPlaceholder: "la.tua.email@esempio.com",
+      phoneLabel: "Numero di telefono",
+      phonePlaceholder: "Il tuo numero di telefono",
+      messageLabel: "Messaggio",
+      messagePlaceholder: "Il tuo messaggio",
+      submitButton: "Invia",
+      submitSuccess: "Inviato con successo!"
     },
     
     // Impact Text
