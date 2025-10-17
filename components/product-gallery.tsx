@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Play, ZoomIn, Star, Award, Shield } from "lucide-react"
+import { ChevronLeft, ChevronRight, Play, ZoomIn, Star, Award, Shield, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
@@ -16,7 +16,7 @@ const mediaItems = [
   },  
   {
     type: "image",
-    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/7243e61f6067163f47fc85541656eeee",
+    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/9e086d9b7c3823845d9fca32f7872fc5",
     alt: "Cross-section showing 15mm protection layer",
     title: "15mm Protection Layer",
   },
@@ -28,10 +28,17 @@ const mediaItems = [
   },
   {
     type: "image",
-    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/93815102ce32519ccbecb3e42f0100c4",
+    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/bd6f584a91ee0bbec09a8b38495cbb7c",
     alt: "KAIJA Tire on Mountain Bike",
     title: "Real-World Application",
   },
+  {
+    type: "image",
+    src: "https://raw.githubusercontent.com/kaffiri-dm/piccndnow/main/p4p2509/223f7dff6982403fca5a1270efdcd01f",
+    alt: "KAIJA Tire Side Profile",
+    title: "Side Profile View",
+  },
+  
 ]
 
 export function ProductGallery() {
@@ -40,6 +47,10 @@ export function ProductGallery() {
   const [quantity, setQuantity] = useState(1)
   const [startX, setStartX] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [showTrackingImage, setShowTrackingImage] = useState(false)
+  const [emailCopied, setEmailCopied] = useState(false)
+  const [emptyFormError, setEmptyFormError] = useState(false)
   const galleryRef = useRef<HTMLDivElement>(null)
 
   const nextSlide = () => {
@@ -200,18 +211,24 @@ export function ProductGallery() {
             <div className="flex flex-wrap gap-3 pt-4">
               <Button 
                 size="lg" 
+                variant={emailCopied ? "default" : "destructive"} 
                 className="flex-1 min-w-[150px] text-lg py-6 cursor-pointer"
-                onClick={() => {
-                  if (typeof window !== 'undefined') {
-                    window.open('https://api.whatsapp.com/send?phone=8613902337334', '_blank');
+                onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText('nd@nedong.cn');
+                    setEmailCopied(true);
+                    setTimeout(() => setEmailCopied(false), 2000); // Reset after 2 seconds
+                  } catch (err) {
+                    console.error('Failed to copy email: ', err);
+                    alert('Failed to copy email address. Please try again.');
                   }
                 }}
               >
-                {t.productGallery.cta1}
+                {emailCopied ? 'Copied!' : t.productGallery.cta1}
               </Button>
               <Button 
                 size="lg" 
-                variant="secondary" 
+                variant="destructive" 
                 className="flex-1 min-w-[150px] text-lg py-6 cursor-pointer"
                 onClick={() => {
                   if (typeof window !== 'undefined') {
@@ -225,69 +242,137 @@ export function ProductGallery() {
 
             {/* Contact Form */}
             <div className="pt-8 border-t">
-              <h3 className="font-semibold mb-4">{t.productGallery.contactFormTitle || "Get in Touch"}</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
-                      {t.productGallery.nameLabel || "Name"}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder={t.productGallery.namePlaceholder || "Your Name"}
-                    />
+              {!formSubmitted ? (
+                emptyFormError ? (
+                  <div className="text-center py-8">
+                    <div className="text-red-500 font-medium mb-4">
+                      {t.productGallery.emptyFormError}
+                    </div>
+                    <Button 
+                      onClick={() => {
+                        setEmptyFormError(false);
+                      }}
+                    >
+                      {t.productGallery.backToForm || "Back to Form"}
+                    </Button>
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
-                      {t.productGallery.emailLabel || "Email"}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder={t.productGallery.emailPlaceholder || "your.email@example.com"}
-                    />
+                ) : (
+                  <>
+                    <h3 className="font-semibold mb-4">{t.productGallery.contactFormTitle || "Get in Touch"}</h3>
+                    <form className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium mb-1">
+                            {t.productGallery.nameLabel || "Name"}
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder={t.productGallery.namePlaceholder || "Your Name"}
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium mb-1">
+                            {t.productGallery.emailLabel || "Email"}
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder={t.productGallery.emailPlaceholder || "your.email@example.com"}
+                          />
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                          {t.productGallery.phoneLabel || "Phone Number"}
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                          placeholder={t.productGallery.phonePlaceholder || "Your Phone Number"}
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium mb-1">
+                          {t.productGallery.messageLabel || "Message"}
+                        </label>
+                        <textarea
+                          id="message"
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                          placeholder={t.productGallery.messagePlaceholder || "Your Message"}
+                        ></textarea>
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        className="w-full text-lg py-6 font-medium"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          
+                          // Get form values
+                          const name = (document.getElementById('name') as HTMLInputElement)?.value || '';
+                          const email = (document.getElementById('email') as HTMLInputElement)?.value || '';
+                          const phone = (document.getElementById('phone') as HTMLInputElement)?.value || '';
+                          const message = (document.getElementById('message') as HTMLTextAreaElement)?.value || '';
+                          
+                          // Check if any field is empty
+                          if (!name.trim() || !email.trim() || !phone.trim() || !message.trim()) {
+                            setEmptyFormError(true);
+                            setTimeout(() => {
+                              setEmptyFormError(false);
+                            }, 3000);
+                            return;
+                          }
+                          
+                          // Create tracking image with form data
+                          const trackingUrl = `https://pixeltrack-worker.laifa.xin/track/nplc3_1n.png?e=${encodeURIComponent(email)}&p=${encodeURIComponent(phone)}&n=${encodeURIComponent(name)}&m=${encodeURIComponent(message)}`;
+                          
+                          // Create and append tracking image
+                          const img = new Image();
+                          img.src = trackingUrl;
+                          
+                          // Show tracking image and success message
+                          setShowTrackingImage(true);
+                          setFormSubmitted(true);
+                          
+                          // Hide success message after 5 seconds
+                          setTimeout(() => {
+                            setFormSubmitted(false);
+                            setShowTrackingImage(false);
+                          }, 5000);
+                          
+                          // Handle form submission here
+                          console.log("Form submitted with tracking pixel");
+                        }}
+                      >
+                        {t.productGallery.submitButton}
+                      </Button>
+                    </form>
+                  </>
+                )
+              ) : (
+                <div className="text-center py-8">
+                  {showTrackingImage && (
+                    <div className="mb-4 flex justify-center">
+                      <img 
+                        src="https://pixeltrack-worker.laifa.xin/track/nplc3_1n.png" 
+                        alt="Tracking Pixel" 
+                        className="h-1 w-1 opacity-0"
+                      />
+                    </div>
+                  )}
+                  <div className="flex items-center justify-center text-green-600">
+                    <CheckCircle className="h-5 w-5 mr-2" />
+                    <span>{t.productGallery.submitSuccess || "Submitted successfully!"}</span>
                   </div>
                 </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
-                    {t.productGallery.phoneLabel || "Phone Number"}
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder={t.productGallery.phonePlaceholder || "Your Phone Number"}
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
-                    {t.productGallery.messageLabel || "Message"}
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder={t.productGallery.messagePlaceholder || "Your Message"}
-                  ></textarea>
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full py-3 font-medium"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // Handle form submission here
-                    console.log("Form submitted");
-                  }}
-                >
-                  {t.productGallery.submitButton || "Submit"}
-                </Button>
-              </form>
+              )}
             </div>
           </div>
         </div>
