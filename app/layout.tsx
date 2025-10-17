@@ -3,10 +3,12 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/contexts/language-context"
+import MetaUpdater from "@/components/meta-updater"
 
+// Define default metadata in English
 export const metadata = {
   title: "KAIJA Tire - Advanced Puncture-Resistant Liner System",
-  description: "Professional-grade tire protection for extreme conditions",
+  description: "KAIJA Tire provides an advanced tire puncture-resistant liner system, featuring a dragon scale texture design and a 15mm protective layer, which can reduce the risk of punctures by about 90%, significantly enhancing riding safety and comfort.",
 }
 
 export default function RootLayout({
@@ -17,6 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Dynamic meta tags will be updated by client-side code */}
+        <title id="dynamic-title">KAIJA Tire - Advanced Puncture-Resistant Liner System</title>
+        <meta id="dynamic-description" name="description" content="KAIJA Tire provides an advanced tire puncture-resistant liner system, featuring a dragon scale texture design and a 15mm protective layer, which can reduce the risk of punctures by about 90%, significantly enhancing riding safety and comfort." />
+        
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -43,6 +49,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
+            <MetaUpdater />
             {children}
           </LanguageProvider>
         </ThemeProvider>
