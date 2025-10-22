@@ -70,6 +70,7 @@ export function HeroSection() {
           {/* CTA 按钮容器 */}
           <div className="flex justify-end mb-6">
             <Button 
+              id="hero-section-inquiry"
               size="lg" 
               className="bg-white text-red-600 hover:bg-gray-100 font-bold text-base sm:text-lg px-8 py-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
               onClick={() => {
